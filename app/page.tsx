@@ -22,11 +22,12 @@ import {
   IconBrandInstagram,
   IconBrandLinkedin,
 } from "@tabler/icons-react";
+import Particles from "./components/Particles/Particles";
 
 export default function Home() {
   const images1 = [
     { src: "/images/experience/kasir1.png", alt: "Kasir 1" },
-    { src: "/images/experience/kasir2.png", alt: "Kasir 2" },
+    { src: "/images/experience/kasir2.png", alt: "kasir 2" },
     { src: "/images/experience/kasir3.png", alt: "Kasir 3" },
     { src: "/images/experience/kasir4.png", alt: "Kasir 4" },
   ];
@@ -298,71 +299,71 @@ export default function Home() {
   const products = [
     {
       title: "Sistem Antrian",
-      link: "https://gomoonbeam.com",
+      link: "https://gitd3ti.vokasi.uns.ac.id/abhipraya/sistem-antrian",
       thumbnail: "/images/experience/antrian1.png",
     },
     {
       title: "Kasir",
-      link: "https://cursor.so",
+      link: "https://github.com/badaso404/web-kasir-resto",
       thumbnail: "/images/experience/kasir1.png",
     },
     {
       title: "Introduce",
-      link: "https://userogue.com",
+      link: "https://badaso404.github.io/",
       thumbnail: "/images/experience/porto1.png",
     },
 
     {
       title: "Smart Edu-P5",
-      link: "https://editorially.org",
+      link: "https://github.com/badaso404/smartedu5p",
       thumbnail: "/images/experience/smart1.png",
     },
     {
       title: "Portofolio",
-      link: "https://editrix.ai",
+      link: "https://badaso404.github.io/",
       thumbnail: "/images/experience/porto4.png",
     },
     {
       title: "Simulator G2 Elite",
-      link: "https://app.pixelperfect.quest",
+      link: "https://gitd3ti.vokasi.uns.ac.id/Bagas/simulator-tembak-reaksi-pt.pindad",
       thumbnail: "/images/experience/vr1.png",
     },
 
     {
       title: "Antrian",
-      link: "https://algochurn.com",
+      link: "https://gitd3ti.vokasi.uns.ac.id/abhipraya/sistem-antrian",
       thumbnail: "/images/experience/antrian3.png",
     },
     {
       title: "Smart Mobile",
-      link: "https://ui.aceternity.com",
+      link: "https://github.com/badaso404/smartedu5p",
       thumbnail: "/images/experience/smart3.png",
     },
     {
       title: "Creativox",
-      link: "https://tailwindmasterkit.com",
+      link: "https://badaso404.github.io/bgsporto.github.io/",
       thumbnail: "/images/experience/porto3.png",
     },
     {
       title: "Simulator VR",
-      link: "https://smartbridgetech.com",
+      link: "https://gitd3ti.vokasi.uns.ac.id/Bagas/simulator-tembak-reaksi-pt.pindad",
       thumbnail: "/images/experience/vr2.png",
     },
     {
       title: "",
-      link: "https://renderwork.studio",
+      link: "https://badaso404.github.io/",
       thumbnail:
         "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
     },
 
     {
       title: "Simulator VR",
-      link: "https://cremedigital.com",
+      link: "https://gitd3ti.vokasi.uns.ac.id/Bagas/simulator-tembak-reaksi-pt.pindad",
       thumbnail: "/images/experience/vr1.png",
     },
     {
       title: "Polres Pati",
-      link: "https://goldenbellsacademy.com",
+      link: "https://gitd3ti.vokasi.uns.ac.id/abhipraya/sistem-antrian",
       thumbnail: "/images/experience/antrian4.png",
     },
     {
@@ -372,7 +373,7 @@ export default function Home() {
     },
     {
       title: "Creativox",
-      link: "https://efreeinvoice.com",
+      link: "https://badaso404.github.io/bgsporto.github.io/",
       thumbnail: "/images/experience/porto1.png",
     },
   ];
@@ -601,6 +602,18 @@ export default function Home() {
       <div className="container px-0 py-10 max-w-full">
         <ScrollVelocity texts={["Hallo Holla", "nice to meet u guys"]} />
         <div className="container mx-auto py-10">
+          <div className="absolute  w-full h-full">
+            <Particles
+              particleColors={["#ffffff", "#ffffff"]}
+              particleCount={200}
+              particleSpread={10}
+              speed={0.1}
+              particleBaseSize={100}
+              moveParticlesOnHover={false}
+              alphaParticles={false}
+              disableRotation={false}
+            />
+          </div>
           <div className="max-w-7xl py-20 px-4 md:px-8 lg:px-10 ">
             <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white font-bold ">
               Contact me
@@ -615,73 +628,86 @@ export default function Home() {
             />
           </div>
           <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
+
           <div className="grid grid-cols-12">
             <div className="col-span-6">
               <div className="flex flex-col gap-6 px-20">
-                <button
-                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-3 text-sm font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                  type="submit"
-                >
-                  <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                    GitHub
-                  </span>
-                  <BottomGradient />
-                </button>
-                <button
-                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 text-sm font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                  type="submit"
-                >
-                  <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                    Gmail
-                  </span>
-                  <BottomGradient />
-                </button>
-                <button
-                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                  type="submit"
-                >
-                  <IconBrandDiscord className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                    Discord
-                  </span>
-                  <BottomGradient />
-                </button>
+                <Link href="https://github.com/badaso404">
+                  <button
+                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-3 text-sm font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                    type="submit"
+                  >
+                    <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                      GitHub
+                    </span>
+                    <BottomGradient />
+                  </button>
+                </Link>
+                <Link href="https://mail.google.com/mail/u/0/#compose">
+                  <button
+                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 text-sm font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                    type="submit"
+                  >
+                    <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                      Gmail
+                    </span>
+                    <BottomGradient />
+                  </button>
+                </Link>
+                <Link href="https://discordapp.com/users/392159001250627586">
+                  <button
+                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                    type="submit"
+                  >
+                    <IconBrandDiscord className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                      Discord
+                    </span>
+                    <BottomGradient />
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="col-span-6">
               <div className="flex flex-col gap-6 px-20">
-                <button
-                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                  type="submit"
-                >
-                  <IconBrandLine className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                    Line
-                  </span>
-                  <BottomGradient />
-                </button>
-                <button
-                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                  type="submit"
-                >
-                  <IconBrandLinkedin className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                    Linkedin
-                  </span>
-                  <BottomGradient />
-                </button>
-                <button
-                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                  type="submit"
-                >
-                  <IconBrandInstagram className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                    Instagram
-                  </span>
-                  <BottomGradient />
-                </button>
+                <Link href="https://line.me/ti/p/E8T8maFUHJ">
+                  <button
+                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                    type="submit"
+                  >
+                    <IconBrandLine className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                      Line
+                    </span>
+                    <BottomGradient />
+                  </button>
+                </Link>
+                <Link href="https://www.linkedin.com/in/bgsprtm56">
+                  <button
+                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                    type="submit"
+                  >
+                    <IconBrandLinkedin className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                      Linkedin
+                    </span>
+                    <BottomGradient />
+                  </button>
+                </Link>
+                <Link href="https://www.instagram.com/tas.hantu">
+                  <button
+                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                    type="submit"
+                  >
+                    <IconBrandInstagram className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                      Instagram
+                    </span>
+                    <BottomGradient />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
