@@ -10,10 +10,10 @@ import PixelTransition from "./components/PixelTransition/PixelTransition";
 import { Timeline } from "./components/Timelines/timeline";
 import GradientText from "./components/GradientText/GradientText";
 import Link from "next/link";
-import ScrollReveal from "./components/ScrollReveal/ScrollReveal";
 import { HeroParallax } from "./components/hero-parallax/hero-parallax";
 import TiltCard from "./components/TiltCard/TiltCard";
 import CircularGallery from "./components/CircularGallery/CircularGallery";
+
 import {
   IconBrandGithub,
   IconBrandGoogle,
@@ -418,8 +418,8 @@ export default function Home() {
     );
   };
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#000000] ">
-      <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full ">
+    <div className="min-h-screen overflow-x-hidden bg-[#000000]">
+      <div className="absolute w-full h-full pointer-events-none">
         <Aurora
           colorStops={["#98D8EF", "#1e68ad", "#7835b8"]}
           blend={0.5}
@@ -514,25 +514,28 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-span-6">
+
+          <div className="col-span-12 md:col-span-6">
             <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
           </div>
         </div>
       </div>
-      <div className="container px-0 py-10 max-w-full ">
+
+      <div className="container px-0 py-10 max-w-full">
         <ScrollVelocity texts={["Hallo Holla", "nice to meet u guys"]} />
       </div>
 
       <div className="container mx-auto py-10">
         <div className="max-w-7xl py-20 px-4 md:px-8 lg:px-10">
-          <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl font-bold">
+          <h2 className="text-lg md:text-4xl mb-4 text-white font-bold">
             About me
           </h2>
-          <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-            I&apos;ve been a few experience for the past 2 years. Here&apos;s u
-            can more know me.
+          <p className="text-neutral-300 text-sm md:text-base max-w-sm">
+            I've been a few experience for the past 2 years. Here's u can more
+            know me.
           </p>
         </div>
+
         <div className="flex flex-col md:flex-row items-center gap-6">
           <PixelTransition
             firstContent={
@@ -595,120 +598,122 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="container mx-auto py-10">
         <Timeline data={data} />
         <HeroParallax products={products} />
       </div>
-      <div className="container px-0 py-10 max-w-full">
-        <ScrollVelocity texts={["Hallo Holla", "nice to meet u guys"]} />
-        <div className="container mx-auto py-10">
-          <div className="absolute  w-full h-full">
-            <Particles
-              particleColors={["#ffffff", "#ffffff"]}
-              particleCount={200}
-              particleSpread={10}
-              speed={0.1}
-              particleBaseSize={100}
-              moveParticlesOnHover={false}
-              alphaParticles={false}
-              disableRotation={false}
-            />
-          </div>
-          <div className="max-w-7xl py-20 px-4 md:px-8 lg:px-10 ">
-            <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white font-bold ">
-              Contact me
-            </h2>
-          </div>
-          <div className="relative h-[600px] overflow-hidden -mt-60">
-            <CircularGallery
-              items={defaultItems}
-              bend={0}
-              textColor="#ffffff"
-              borderRadius={0.05}
-            />
-          </div>
-          <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
 
-          <div className="grid grid-cols-12">
-            <div className="col-span-6">
-              <div className="flex flex-col gap-6 px-20">
-                <Link href="https://github.com/badaso404">
-                  <button
-                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-3 text-sm font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                    type="submit"
-                  >
-                    <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                      GitHub
-                    </span>
-                    <BottomGradient />
-                  </button>
-                </Link>
-                <Link href="https://mail.google.com/mail/u/0/#compose">
-                  <button
-                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 text-sm font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                    type="submit"
-                  >
-                    <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                      Gmail
-                    </span>
-                    <BottomGradient />
-                  </button>
-                </Link>
-                <Link href="https://discordapp.com/users/392159001250627586">
-                  <button
-                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                    type="submit"
-                  >
-                    <IconBrandDiscord className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                      Discord
-                    </span>
-                    <BottomGradient />
-                  </button>
-                </Link>
-              </div>
+      <div className="relative container px-0 py-10 max-w-full overflow-hidden">
+        <ScrollVelocity texts={["Hallo Holla", "nice to meet u guys"]} />
+
+        <div className="absolute w-full h-full">
+          <Particles
+            particleColors={["#ffffff", "#fff000"]}
+            particleCount={400}
+            particleSpread={10}
+            speed={0.2}
+            particleBaseSize={100}
+            moveParticlesOnHover={false}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
+
+        <div className="max-w-7xl py-20 px-4 md:px-8 lg:px-10 ">
+          <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white font-bold ">
+            Contact me
+          </h2>
+        </div>
+        <div className="relative h-[600px] overflow-hidden -mt-60">
+          <CircularGallery
+            items={defaultItems}
+            bend={0}
+            textColor="#ffffff"
+            borderRadius={0.05}
+          />
+        </div>
+        <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
+
+        <div className="grid grid-cols-12">
+          <div className="col-span-6">
+            <div className="flex flex-col gap-6 px-20">
+              <Link href="https://github.com/badaso404">
+                <button
+                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-3 text-sm font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                  type="submit"
+                >
+                  <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                    GitHub
+                  </span>
+                  <BottomGradient />
+                </button>
+              </Link>
+              <Link href="https://mail.google.com/mail/u/0/#compose">
+                <button
+                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 text-sm font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                  type="submit"
+                >
+                  <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                    Gmail
+                  </span>
+                  <BottomGradient />
+                </button>
+              </Link>
+              <Link href="https://discordapp.com/users/392159001250627586">
+                <button
+                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                  type="submit"
+                >
+                  <IconBrandDiscord className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                    Discord
+                  </span>
+                  <BottomGradient />
+                </button>
+              </Link>
             </div>
-            <div className="col-span-6">
-              <div className="flex flex-col gap-6 px-20">
-                <Link href="https://line.me/ti/p/E8T8maFUHJ">
-                  <button
-                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                    type="submit"
-                  >
-                    <IconBrandLine className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                      Line
-                    </span>
-                    <BottomGradient />
-                  </button>
-                </Link>
-                <Link href="https://www.linkedin.com/in/bgsprtm56">
-                  <button
-                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                    type="submit"
-                  >
-                    <IconBrandLinkedin className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                      Linkedin
-                    </span>
-                    <BottomGradient />
-                  </button>
-                </Link>
-                <Link href="https://www.instagram.com/tas.hantu">
-                  <button
-                    className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
-                    type="submit"
-                  >
-                    <IconBrandInstagram className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                    <span className="text-sm text-neutral-700 dark:text-neutral-300">
-                      Instagram
-                    </span>
-                    <BottomGradient />
-                  </button>
-                </Link>
-              </div>
+          </div>
+          <div className="col-span-6">
+            <div className="flex flex-col gap-6 px-20">
+              <Link href="https://line.me/ti/p/E8T8maFUHJ">
+                <button
+                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                  type="submit"
+                >
+                  <IconBrandLine className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                    Line
+                  </span>
+                  <BottomGradient />
+                </button>
+              </Link>
+              <Link href="https://www.linkedin.com/in/bgsprtm56">
+                <button
+                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                  type="submit"
+                >
+                  <IconBrandLinkedin className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                    Linkedin
+                  </span>
+                  <BottomGradient />
+                </button>
+              </Link>
+              <Link href="https://www.instagram.com/tas.hantu">
+                <button
+                  className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
+                  type="submit"
+                >
+                  <IconBrandInstagram className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                  <span className="text-sm text-neutral-700 dark:text-neutral-300">
+                    Instagram
+                  </span>
+                  <BottomGradient />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
